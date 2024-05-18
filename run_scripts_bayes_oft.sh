@@ -1,11 +1,3 @@
-export MODEL_NAME="runwayml/stable-diffusion-v1-5"
-export INSTANCE_DIR="./data/${selected_subject}"
-export CLASS_DIR="./data/class_data/${class_token}"
-export OUTPUT_DIR="checkpoints/bayes_oft/${name}"
-export instance_prompt="a photo of ${unique_token} ${class_token}"
-export class_prompt="a photo of ${class_token}"
-export path="logs/bayes_oft/${name}"
-
 seed=0
 sigma=0.01
 testsigma=0.0
@@ -14,6 +6,15 @@ selected_subject="backpack"
 class_token="backpack"
 name="${selected_subject}"
 unique_token="qwe"
+
+
+export MODEL_NAME="runwayml/stable-diffusion-v1-5"
+export INSTANCE_DIR="./data/${selected_subject}"
+export CLASS_DIR="./data/class_data/${class_token}"
+export OUTPUT_DIR="checkpoints/bayes_oft/${name}"
+export instance_prompt="a photo of ${unique_token} ${class_token}"
+export class_prompt="a photo of ${class_token}"
+export path="logs/bayes_oft/${name}"
 
 
 # Training models
@@ -64,5 +65,5 @@ accelerate launch test_dreambooth.py \
 
 # Evaluate the generation result
 python utils/process.py --data_path="./${path}/${name}"
-python eval_updated_v2.py --image_dir=${path}" --json_name jsons/metadata_1_${selected_subject}.json --subject_name ${selected_subject}
+python eval_updated_v2.py --image_dir=${path} --json_name jsons/metadata_1_${selected_subject}.json --subject_name ${selected_subject}
 

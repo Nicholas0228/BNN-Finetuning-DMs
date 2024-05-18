@@ -1,0 +1,5 @@
+data/class_data
+checkpoints/
+logs/
+*.pyc
+.ipynb_checkpoints/

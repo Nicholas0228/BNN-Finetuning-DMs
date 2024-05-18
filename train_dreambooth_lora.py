@@ -718,8 +718,8 @@ def main(args):
         lora_attn_procs[name] = LoRAAttnProcessor(hidden_size=hidden_size, cross_attention_dim=cross_attention_dim)
 
     unet.set_attn_processor(lora_attn_procs)
-    lora_layers = AttnProcsLayers(unet.attn_processors)
 
+    lora_layers = AttnProcsLayers(unet.attn_processors)
     accelerator.register_for_checkpointing(lora_layers)
 
     # Enable TF32 for faster training on Ampere GPUs,
