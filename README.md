@@ -1,6 +1,6 @@
 # BNN Enhanced Few-Shot Fine-Tuning on Diffusion Models
 
-This repository contains code for implementing Bayesian Neural Networks (BNNs) alongside several few-shot fine-tuning methods on diffusion models, including DreamBooth, LoRA, and OFT. Additionally, a demo class is provided to showcase the performance differences when using BNNs versus not using them.
+This repository contains code for applying Bayesian Neural Networks (BNNs) on diffusion models under several few-shot fine-tuning methods, including DreamBooth, LoRA, and OFT. Additionally, a demo class is provided to showcase the performance differences when using BNNs versus not using them.
 
 ## Requirements
 
