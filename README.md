@@ -1,6 +1,9 @@
-# BNN Enhanced Few-Shot Fine-Tuning on Diffusion Models
+# Exploring Diffusion Models' Corruption Stage in Few-Shot Fine-tuning and Mitigating with Bayesian Neural Networks (KDD 2026)
 
-This repository contains code for applying Bayesian Neural Networks (BNNs) on diffusion models under several few-shot fine-tuning methods, including DreamBooth, LoRA, and OFT. Additionally, a demo class is provided to showcase the performance differences when using BNNs versus not using them.
+[![arXiv](https://img.shields.io/badge/arXiv-2405.19931-b31b1b.svg)](https://arxiv.org/abs/2405.19931)
+
+Few-shot fine-tuning enables efficient personalization of diffusion models, but its training dynamics remain poorly understood.  
+This work identifies a previously underexplored **corruption stage** during few-shot fine-tuning, where generation quality temporarily degrades and exhibits structured noisy artifacts before eventually recovering through overfitting. We provide a theoretical explanation showing that this phenomenon arises from a **narrowed learning distribution** intrinsic to few-shot regimes. To mitigate corruption, we introduce a Bayesian treatment of diffusion models via variational inference, which implicitly broadens the learned distribution and yields a training objective interpretable as an expectation of the diffusion loss regularized toward the pretrained model. The proposed approach is fully compatible with existing few-shot fine-tuning methods (e.g., DreamBooth, LoRA, OFT) and introduces no additional inference cost, while consistently improving fidelity, quality, and diversity across personalization tasks.
 
 ## Requirements
 
